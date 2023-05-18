@@ -24,18 +24,20 @@
 
         <title>JSP Page</title>
         <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="./css/all.css">
+        <link rel="stylesheet" href="css/Boton.css">
+        <link rel="stylesheet" href="css/Inputs.css">
+        <link rel="stylesheet" href="css/all.css">
 
 
         <!-- --------- Owl-Carousel ------------------->
-        <link rel="stylesheet" href="./css/owl.carousel.min.css">
-        <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
         <!-- ------------ AOS Library ------------------------- -->
-        <link rel="stylesheet" href="./css/aos.css">
+        <link rel="stylesheet" href="css/aos.css">
 
         <!-- Custom Style   -->
-        <link rel="stylesheet" href="./css/Style.css">
+        <link rel="stylesheet" href="css/Style.css">
     </head>
     <body>
         <nav class="nav">
@@ -113,57 +115,64 @@
             </div>
             <br>
             <div>
-            <input type="text" name="descripcion" placeholder="Descripcion" required="true" value="<%=descrip%>" title="Ingrese la descripcion">
-             <label class="custom-file-label" for="customFileLang">Ingrese una descripcion</label>
+                <input type="text" name="descripcion" placeholder="Descripcion" required="true" value="<%=descrip%>" title="Ingrese la descripcion">
+                <label class="custom-file-label" for="customFileLang">Ingrese una descripcion</label>
+            </div>
+                <br>
+                <div>
+            <div class="input-container">
+                <input type="text" name="descripcion" class="input" placeholder="Descripcion" value="<%=descrip%>">
+                <div class="highlight"></div>
+            </div>
+                </div>
+            <br>
+            <div>
+                <input type="text" name="objetivo 1" placeholder="Objetivos" required="true" value="<%=obj1%>" title="Ingrese los objetivos">
+                <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 1</label>
+            </div>
+            <div>
+                <input type="text" name="objetivo 2" placeholder="Objetivos" required="true" value="<%=obj2%>" title="Ingrese los objetivos">
+                <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 2</label>
+            </div>
+            <div>
+                <input type="text" name="objetivo 3" placeholder="Objetivos" required="true" value="<%=obj3%>" title="Ingrese los objetivos">
+                <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 3</label>
             </div>
             <br>
             <div>
-            <input type="text" name="objetivo 1" placeholder="Objetivos" required="true" value="<%=obj1%>" title="Ingrese los objetivos">
-             <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 1</label>
-            </div>
-            <div>
-            <input type="text" name="objetivo 2" placeholder="Objetivos" required="true" value="<%=obj2%>" title="Ingrese los objetivos">
-             <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 2</label>
-            </div>
-            <div>
-            <input type="text" name="objetivo 3" placeholder="Objetivos" required="true" value="<%=obj3%>" title="Ingrese los objetivos">
-             <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 3</label>
+                <input type="file" name="video" placeholder="video" required="true" accept="video/*" title="Ingrese un video">
+                <label class="custom-file-label" for="customFileLang">Ingrese un video que represente su campaña</label>
             </div>
             <br>
             <div>
-            <input type="file" name="video" placeholder="video" required="true" accept="video/*" title="Ingrese un video">
-             <label class="custom-file-label" for="customFileLang">Ingrese un video que represente su campaña</label>
-            </div>
-            <br>
-            <div>
-            <input type="hidden" name="usuario" value="${Usuarios.id}">
-            <input type="hidden" name="opcon" value="Actualizar">
-            <button type="submit" name="btn2" value="Actualizar">Actualizar</button>
+                <input type="hidden" name="usuario" value="${Usuarios.id}">
+                <input type="hidden" name="opcon" value="Actualizar">
+                <button class="btn" type="submit" name="btn2" value="Actualizar">Actualizar</button>
             </div>
         </form>
-            <br>
-        <a href="VerificarCandidato.jsp"><button type="button">Volver</button> </a>
+        <br>
+        <a href="VerificarCandidato.jsp"><button class="btn2" type="button">Volver</button> </a>
     </center>
-        
-        <%        } else {
 
-        %>
+    <%        } else {
 
-        <form method="post" action="GuardarCandidatura.jsp" enctype="multipart/form-data">
-            <input type="file" name="foto" placeholder="Foto" required="true" accept="image/* title="Ingrese una foto">
-            <input type="text" name="descripcion" placeholder="Descripcion" required="true">
-            <input type="text" name="objetivo 1" placeholder="Objetivos" required="true">
-            <input type="text" name="objetivo 2" placeholder="Objetivos" required="true">
-            <input type="text" name="objetivo 3" placeholder="Objetivos" required="true">
-            <input type="file" name="video" placeholder="video" required="true" accept="video/*>
-                   <input type="hidden" name="usuario" value="${Usuarios.id}">
-            <input type="hidden" name="opcon" value="Guardar">
-            <button type="submit" name="btn2" value="Guardar">Guardar</button>
-        </form>
+    %>
 
-        <%            }
+    <form method="post" action="GuardarCandidatura.jsp" enctype="multipart/form-data">
+        <input type="file" name="foto" placeholder="Foto" required="true" accept="image/* title="Ingrese una foto">
+        <input type="text" name="descripcion" placeholder="Descripcion" required="true">
+        <input type="text" name="objetivo 1" placeholder="Objetivos" required="true">
+        <input type="text" name="objetivo 2" placeholder="Objetivos" required="true">
+        <input type="text" name="objetivo 3" placeholder="Objetivos" required="true">
+        <input type="file" name="video" placeholder="video" required="true" accept="video/*">
+        <input type="hidden" name="usuario" value="${Usuarios.id}">
+        <input type="hidden" name="opcon" value="Guardar">
+        <button class="btn" type="submit" name="btn2" value="Guardar">Guardar</button>
+    </form>
+
+    <%            }
 
 
-        %>
-    </body>
+    %>
+</body>
 </html>

@@ -15,23 +15,22 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+         
         <title>JSP Page</title>
+        <link rel="stylesheet" href="css/Boton.css">
         <!-- Font Awesome Icons -->
-        <link rel="stylesheet" href="./css/all.css">
+        <link rel="stylesheet" href="css/all.css">
        
 
         <!-- --------- Owl-Carousel ------------------->
-        <link rel="stylesheet" href="./css/owl.carousel.min.css">
-        <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
 
         <!-- ------------ AOS Library ------------------------- -->
-        <link rel="stylesheet" href="./css/aos.css">
+        <link rel="stylesheet" href="css/aos.css">
 
         <!-- Custom Style   -->
-        <link rel="stylesheet" href="./css/Style.css">
+        <link rel="stylesheet" href="css/Style.css">
     </head>
     <body>
         <nav class="nav">
@@ -118,13 +117,13 @@
             </div>
             <div class="row">   
                 <div class="column">
-                    Objetivo 1<input type="text" disabled="true" value="<%=objetivo1%>">
+                    Objetivo 1<p style="color: black;"><%=objetivo1%></p>
                 </div>
                 <div class="column">
-                    Objetivo 2<input type="text" disabled="true" value="<%=objetivo2%>">
+                    Objetivo 2<p style="color: black;"><%=objetivo2%></p>
                 </div>
                 <div class="column">
-                    Objetivo 3<input type="text" disabled="true" value="<%=objetivo3%>">
+                    Objetivo 3<p style="color: black;"><%=objetivo3%></p>
                 </div>
                 <div class="column">
                     
@@ -135,7 +134,7 @@
             </div>
             <form method="post" action="Candidatura.jsp">
                 <input type="hidden" name="usuario" value="${Usuarios.id}">
-                <button type="submit" name="btnactu" value="actu">Modificar</button>
+                <button class="btn" type="submit" name="btnactu" value="actu">Modificar</button>
             </form>
 
         </div>
@@ -147,7 +146,7 @@
 
         <form method="post" action="Candidatura.jsp">
             <input type="hidden" name="usuario" value="${Usuarios.id}">
-            <button type="submit" name="btn" value="Guardar">Candidatura</button>
+            <button class="btn" type="submit" name="btn" value="Guardar">Candidatura</button>
         </form>
 
         <%            }

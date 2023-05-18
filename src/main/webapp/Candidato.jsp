@@ -77,19 +77,29 @@
             Connection cn = null;
             PreparedStatement ps = null;
             ResultSet rs = null;
+            Connection cn2 = null;
+            PreparedStatement ps2 = null;
+            ResultSet rs2 = null;
             String sql = "select * from candidatura where idUsuario = (?);";
+            String sql2 = "select * from objetivos where idUsuario = (?);";
             // out.println(idUsu);
             cn = con.conectar();
             ps = cn.prepareStatement(sql);
             ps.setInt(1, idUsu);
             rs = ps.executeQuery();
+            cn2 = con.conectar();
+            ps2 = cn2.prepareStatement(sql2);
+            ps2.setInt(1, idUsu);
+            rs2 = ps2.executeQuery();
             String foto = null;
             String foto2 = null;
-            if (rs.next()) {
+            if (rs.next() && rs2.next()) {
                 byte[] imagenBytes = rs.getBytes(2);
                 byte[] videoBytes = rs.getBytes(5);
                 String descripcion = rs.getString(3);
-                String objetivos = rs.getString(4);
+                String objetivo1 = rs2.getString(2);
+                String objetivo2 = rs2.getString(3);
+                String objetivo3 = rs2.getString(4);
                 // Incrustar los datos de la imagen en la página HTML utilizando la etiqueta <img>
                 foto = "src=\"data:image/jpeg;base64," + DatatypeConverter.printBase64Binary(imagenBytes) + "\"";
                 foto2 = "src=\"data:video/mp4;base64," + javax.xml.bind.DatatypeConverter.printBase64Binary(videoBytes) + "\"";
@@ -108,7 +118,13 @@
             </div>
             <div class="row">   
                 <div class="column">
-                    Objetivos<input type="text" disabled="true" value="<%=objetivos%>">
+                    Objetivo 1<input type="text" disabled="true" value="<%=objetivo1%>">
+                </div>
+                <div class="column">
+                    Objetivo 2<input type="text" disabled="true" value="<%=objetivo2%>">
+                </div>
+                <div class="column">
+                    Objetivo 3<input type="text" disabled="true" value="<%=objetivo3%>">
                 </div>
                 <div class="column">
                     

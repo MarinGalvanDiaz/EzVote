@@ -84,16 +84,26 @@
             Connection cn = null;
             PreparedStatement ps = null;
             ResultSet rs = null;
+            Connection cn2 = null;
+            PreparedStatement ps2 = null;
+            ResultSet rs2 = null;
             String sql = "select * from candidatura where idUsuario = (?);";
+            String sql2 = "select * from objetivos where idUsuario = (?);";
 
             cn = con.conectar();
             ps = cn.prepareStatement(sql);
             ps.setInt(1, idUsu);
             rs = ps.executeQuery();
+            cn2 = con.conectar();
+            ps2 = cn2.prepareStatement(sql2);
+            ps2.setInt(1, idUsu);
+            rs2 = ps2.executeQuery();
 
-            if (rs.next()) {
+            if (rs.next() && rs2.next()) {
                 String descrip = rs.getString(3);
-                String obj = rs.getString(4);
+                String obj1 = rs2.getString(2);
+                String obj2 = rs2.getString(3);
+                String obj3 = rs2.getString(4);
         %>
     <center>
         <form method="post" action="GuardarCandidatura.jsp" enctype="multipart/form-data">
@@ -108,8 +118,16 @@
             </div>
             <br>
             <div>
-            <input type="text" name="objetivos" placeholder="Objetivos" required="true" value="<%=obj%>" title="Ingrese los objetivos">
-             <label class="custom-file-label" for="customFileLang">Ingrese sus objetivos, separados por comas (",")</label>
+            <input type="text" name="objetivo 1" placeholder="Objetivos" required="true" value="<%=obj1%>" title="Ingrese los objetivos">
+             <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 1</label>
+            </div>
+            <div>
+            <input type="text" name="objetivo 2" placeholder="Objetivos" required="true" value="<%=obj2%>" title="Ingrese los objetivos">
+             <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 2</label>
+            </div>
+            <div>
+            <input type="text" name="objetivo 3" placeholder="Objetivos" required="true" value="<%=obj3%>" title="Ingrese los objetivos">
+             <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 3</label>
             </div>
             <br>
             <div>
@@ -134,7 +152,9 @@
         <form method="post" action="GuardarCandidatura.jsp" enctype="multipart/form-data">
             <input type="file" name="foto" placeholder="Foto" required="true" accept="image/* title="Ingrese una foto">
             <input type="text" name="descripcion" placeholder="Descripcion" required="true">
-            <input type="text" name="objetivos" placeholder="Objetivos" required="true">
+            <input type="text" name="objetivo 1" placeholder="Objetivos" required="true">
+            <input type="text" name="objetivo 2" placeholder="Objetivos" required="true">
+            <input type="text" name="objetivo 3" placeholder="Objetivos" required="true">
             <input type="file" name="video" placeholder="video" required="true" accept="video/*>
                    <input type="hidden" name="usuario" value="${Usuarios.id}">
             <input type="hidden" name="opcon" value="Guardar">

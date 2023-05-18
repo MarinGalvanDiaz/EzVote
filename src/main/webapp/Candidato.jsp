@@ -15,12 +15,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
         <title>JSP Page</title>
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="./css/all.css">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+       
 
         <!-- --------- Owl-Carousel ------------------->
         <link rel="stylesheet" href="./css/owl.carousel.min.css">
@@ -99,23 +100,30 @@
         <div class="container">
             <div class="row">  
                 <div class="column">
-        <img <%=foto%> id="imgPreview" alt="img" style="height: 220px; width: 220px">
+                    <img <%=foto%> id="imgPreview" alt="img" style="height: 220px; width: 220px">
                 </div>
                 <div class="column">
-        Descripción<input type="text" disabled="true" value="<%=descripcion%>">
+                    Descripción<input type="text" disabled="true" value="<%=descripcion%>">
                 </div>
-        </div>
-        Objetivos<input type="text" disabled="true" value="<%=objetivos%>">
-        <video <video width="800" height="600" controls autoplay>
-            <source <%=foto2%> type="video/mp4">
-        </video>
+            </div>
+            <div class="row">   
+                <div class="column">
+                    Objetivos<input type="text" disabled="true" value="<%=objetivos%>">
+                </div>
+                <div class="column">
+                    
+                <video width="800" height="600" controls autoplay>
+                    <source <%=foto2%> type="video/mp4">
+                </video>
+                </div>
+            </div>
+            <form method="post" action="Candidatura.jsp">
+                <input type="hidden" name="usuario" value="${Usuarios.id}">
+                <button type="submit" name="btnactu" value="actu">Modificar</button>
+            </form>
 
-        <form method="post" action="Candidatura.jsp">
-            <input type="hidden" name="usuario" value="${Usuarios.id}">
-            <button type="submit" name="btnactu" value="actu">Modificar</button>
-        </form>
         </div>
-        
+
         <%
         } else {
 

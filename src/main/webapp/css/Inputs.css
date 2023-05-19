@@ -6,6 +6,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
     Created on : 18 may 2023, 12:44:14
     Author     : chang
 */
+html{
+    height: 100%;
+    width: 100;
+}
 
 *{
     box-sizing:border-box;
@@ -45,6 +49,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
   bottom: 0;
   left: 0;
   width: 0;
+  padding-left: 50vw;
+  padding-right: 50vw;
   height: 2px;
   background-color: #6c63ff;
   transition: width 0.3s ease;

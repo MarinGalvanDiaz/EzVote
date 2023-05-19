@@ -119,12 +119,18 @@
                 <label class="custom-file-label" for="customFileLang">Ingrese una descripcion</label>
             </div>
                 <br>
-                <div>
-            <div class="input-container">
+                <br>
+                <center>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                    <div class="input-container" style="position: absolute;">
                 <input type="text" name="descripcion" class="input" placeholder="Descripcion" value="<%=descrip%>">
                 <div class="highlight"></div>
             </div>
                 </div>
+                </div>
+                </center>
+            <br>
             <br>
             <div>
                 <input type="text" name="objetivo 1" placeholder="Objetivos" required="true" value="<%=obj1%>" title="Ingrese los objetivos">

@@ -101,6 +101,7 @@
                     }
                 }
                 if (opcon.equals("Guardar")) {
+                System.out.println("Llega?");
                     Connection cn3 = con.conectar();
                     PreparedStatement ps3 = cn3.prepareStatement(sql4);
                     ps3.setString(1, objetivo1);
@@ -110,7 +111,7 @@
                     ps3.executeUpdate();
                     cn2 = con.conectar();
                     Connection cn4 = con.conectar();
-                    PreparedStatement ps4 = cn4.prepareStatement("Select idObjetivos where idUsuario = (?);");
+                    PreparedStatement ps4 = cn4.prepareStatement("Select idObjetivos from objetivos where idUsuario = (?);");
                     ps4.setInt(1, idUsu2);
                     ResultSet rs3 = ps4.executeQuery();
                     if(rs3.next()){

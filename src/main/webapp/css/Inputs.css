@@ -8,7 +8,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 html{
     height: 100%;
-    width: 100;
+    width: 100%;
 }
 
 *{
@@ -26,7 +26,8 @@ html{
   background-color: #f8f8f8;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  max-width: 200px;
+  width: 400px;
+  height: 400px;
   color: #333;
 }
 
@@ -49,8 +50,6 @@ html{
   bottom: 0;
   left: 0;
   width: 0;
-  padding-left: 50vw;
-  padding-right: 50vw;
   height: 2px;
   background-color: #6c63ff;
   transition: width 0.3s ease;

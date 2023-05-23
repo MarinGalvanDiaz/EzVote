@@ -16,12 +16,10 @@
 <%@page import="Modelo.Usuarios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+        
         <title>JSP Page</title>
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="css/Boton.css">
@@ -39,7 +37,7 @@
         <!-- Custom Style   -->
         <link rel="stylesheet" href="css/Style.css">
     </head>
-    <body>
+    <body background="Images/otrofonderrimo.gif" style="height: 100%; width: 100%; background-size: cover; background-repeat:   no-repeat; background-attachment: fixed;">
         <nav class="nav">
             <div class="nav-menu flex-row">
                 <div class="nav-brand">
@@ -110,45 +108,66 @@
     <center>
         <form method="post" action="GuardarCandidatura.jsp" enctype="multipart/form-data">
             <div class="custom-file">
+                <p>Ingrese una foto para identificación: </p>
                 <input type="file" class="custom-file-input" name="foto" placeholder="Foto" required="true" accept="image/*" title="Ingrese una foto">
-                <label class="custom-file-label" for="customFileLang">Ingrese una foto suya</label>
+                
             </div>
-            <br>
-            <div>
-                <input type="text" name="descripcion" placeholder="Descripcion" required="true" value="<%=descrip%>" title="Ingrese la descripcion">
-                <label class="custom-file-label" for="customFileLang">Ingrese una descripcion</label>
-            </div>
-                <br>
-                <br>
+            
+            
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                
+                
                 <center>
                     <div style="position: relative;">
-                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                    <div style="display: flex; align-content: initial; justify-content: center; align-items: center;">
+                        
                     <div class="input-container" style="position: absolute;">
-                <input type="text" name="descripcion" class="input" placeholder="Descripcion" value="<%=descrip%>">
+                        <p>Ingrese una descripción: </p>
+                        <textarea name="descripcion" class="input" placeholder="Descripcion"><%=descrip%></textarea>
+                <div class="highlight"></div>
+            </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                        
+                    <div class="input-container" style="position: absolute;">
+                        <p>Ingrese una propuesta: </p>
+                        <textarea name="objetivo 1" class="input" placeholder="objetivo 1"><%=obj1%></textarea>
+                <div class="highlight"></div>
+            </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                        
+                    <div class="input-container" style="position: absolute;">
+                        <p>Ingrese una propuesta: </p>
+                <textarea name="objetivo 2" class="input" placeholder="objetivo 2"><%=obj2%></textarea>
+                <div class="highlight"></div>
+            </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                        
+                    <div class="input-container" style="position: absolute;">
+                        <p>Ingrese una propuesta: </p>
+                <textarea name="objetivo 3" class="input" placeholder="objetivo 3"><%=obj3%></textarea>
                 <div class="highlight"></div>
             </div>
                 </div>
                 </div>
                 </center>
-            <br>
-            <br>
-            <div>
-                <input type="text" name="objetivo 1" placeholder="Objetivos" required="true" value="<%=obj1%>" title="Ingrese los objetivos">
-                <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 1</label>
-            </div>
-            <div>
-                <input type="text" name="objetivo 2" placeholder="Objetivos" required="true" value="<%=obj2%>" title="Ingrese los objetivos">
-                <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 2</label>
-            </div>
-            <div>
-                <input type="text" name="objetivo 3" placeholder="Objetivos" required="true" value="<%=obj3%>" title="Ingrese los objetivos">
-                <label class="custom-file-label" for="customFileLang">Ingrese sus objetivo 3</label>
-            </div>
-            <br>
-            <div>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+                <p>Ingrese un video relacionado a su candidatura: </p>
                 <input type="file" name="video" placeholder="video" required="true" accept="video/*" title="Ingrese un video">
-                <label class="custom-file-label" for="customFileLang">Ingrese un video que represente su campaña</label>
+                
             </div>
+            <br>
             <br>
             <div>
                 <input type="hidden" name="usuario" value="${Usuarios.id}">
@@ -159,23 +178,85 @@
         <br>
         <a href="VerificarCandidato.jsp"><button class="btn2" type="button">Volver</button> </a>
     </center>
+                <br><br><br>
 
     <%        } else {
 
     %>
-
-    <form method="post" action="GuardarCandidatura.jsp" enctype="multipart/form-data">
-        <input type="file" name="foto" placeholder="Foto" required="true" accept="image/* title="Ingrese una foto">
-        <input type="text" name="descripcion" placeholder="Descripcion" required="true">
-        <input type="text" name="objetivo 1" placeholder="Objetivos" required="true">
-        <input type="text" name="objetivo 2" placeholder="Objetivos" required="true">
-        <input type="text" name="objetivo 3" placeholder="Objetivos" required="true">
-        <input type="file" name="video" placeholder="video" required="true" accept="video/*">
-        <input type="hidden" name="usuario" value="${Usuarios.id}">
-        <input type="hidden" name="opcon" value="Guardar">
-        <button class="btn" type="submit" name="btn2" value="Guardar">Guardar</button>
-    </form>
-
+ <center>
+        <form method="post" action="GuardarCandidatura.jsp" enctype="multipart/form-data">
+            <div class="custom-file">
+                <p>Ingrese una foto para identificación: </p>
+                <input type="file" class="custom-file-input" name="foto" placeholder="Foto" required="true" accept="image/*" title="Ingrese una foto">
+                
+            </div>
+            
+            
+                <br><br><br><br><br><br><br><br><br><br><br><br>
+                
+                
+                <center>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: initial; justify-content: center; align-items: center;">
+                        
+                    <div class="input-container" style="position: absolute;">
+                        <p>Ingrese una descripción: </p>
+                        <textarea name="descripcion" class="input" placeholder="Descripcion"></textarea>
+                <div class="highlight"></div>
+            </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                        
+                    <div class="input-container" style="position: absolute;">
+                        <p>Ingrese una propuesta: </p>
+                        <textarea name="objetivo 1" class="input" placeholder="objetivo 1"></textarea>
+                <div class="highlight"></div>
+            </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                        
+                    <div class="input-container" style="position: absolute;">
+                        <p>Ingrese una propuesta: </p>
+                <textarea name="objetivo 2" class="input" placeholder="objetivo 2"></textarea>
+                <div class="highlight"></div>
+            </div>
+                </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                    <div style="position: relative;">
+                    <div style="display: flex; align-content: center; justify-content: center; align-items: center;">
+                        
+                    <div class="input-container" style="position: absolute;">
+                        <p>Ingrese una propuesta: </p>
+                <textarea name="objetivo 3" class="input" placeholder="objetivo 3"></textarea>
+                <div class="highlight"></div>
+            </div>
+                </div>
+                </div>
+                </center>
+            <br><br><br><br><br><br><br><br><br><br><br><br>
+                <p>Ingrese un video relacionado a su candidatura: </p>
+                <input type="file" name="video" placeholder="video" required="true" accept="video/*" title="Ingrese un video">
+                
+            </div>
+            <br>
+            <br>
+            <div>
+                <input type="hidden" name="usuario" value="${Usuarios.id}">
+                <input type="hidden" name="opcon" value="Guardar">
+                <button class="btn" type="submit" name="btn2" value="Guardar">Guardar</button>
+            </div>
+        </form>
+        <br>
+        <a href="VerificarCandidato.jsp"><button class="btn2" type="button">Volver</button> </a>
+    </center>
+                <br><br><br>
     <%            }
 
 

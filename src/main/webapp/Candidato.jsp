@@ -12,11 +12,12 @@
 <%@page import="Modelo.Usuarios"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          
         <title>JSP Page</title>
+        <link rel="stylesheet" href="css/Estilo.css">
         <link rel="stylesheet" href="css/Boton.css">
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="css/all.css">
@@ -31,8 +32,9 @@
 
         <!-- Custom Style   -->
         <link rel="stylesheet" href="css/Style.css">
+        
     </head>
-    <body>
+    <body background="Images/otrofonderrimo.gif" style="height: 100%; width: 100%; background-size: cover;">
         <nav class="nav">
             <div class="nav-menu flex-row">
                 <div class="nav-brand">
@@ -105,40 +107,37 @@
 
 
         %>
-        <p>hola pa </p>
-        <div class="container">
-            <div class="row">  
-                <div class="column">
-                    <img <%=foto%> id="imgPreview" alt="img" style="height: 220px; width: 220px">
-                </div>
-                <div class="column">
-                    Descripción<input type="text" disabled="true" value="<%=descripcion%>">
-                </div>
+        
+        <div class="grid-container">
+            <div class="grid-item-1">
+                
+                    <img <%=foto%> id="imgPreview" alt="img" style="height: 500px; width: 350px">
             </div>
-            <div class="row">   
-                <div class="column">
-                    Objetivo 1<p style="color: black;"><%=objetivo1%></p>
-                </div>
-                <div class="column">
-                    Objetivo 2<p style="color: black;"><%=objetivo2%></p>
-                </div>
-                <div class="column">
-                    Objetivo 3<p style="color: black;"><%=objetivo3%></p>
-                </div>
-                <div class="column">
-                    
-                <video width="800" height="600" controls autoplay>
+            <div class="grid-item-2">
+            
+                <h2>Descripción</h2><p style="color: black;"><%=descripcion%></p>
+               
+          
+                <h2>Propuesta 1</h2><p style="color: black;"><%=objetivo1%></p>
+              
+                <h2>Propuesta 2</h2><p style="color: black;"><%=objetivo2%></p>
+               
+                <h2>Propuesta 3</h2><p style="color: black;"><%=objetivo3%></p>
+                    </div>
+            
+            <div class="grid-item-3">
+                <video width="1200" height="600" controls autoplay>
                     <source <%=foto2%> type="video/mp4">
                 </video>
-                </div>
             </div>
+                <div class="grid-item-4">
             <form method="post" action="Candidatura.jsp">
                 <input type="hidden" name="usuario" value="${Usuarios.id}">
                 <button class="btn" type="submit" name="btnactu" value="actu">Modificar</button>
             </form>
-
+                </div>
         </div>
-
+                
         <%
         } else {
 
@@ -146,7 +145,9 @@
 
         <form method="post" action="Candidatura.jsp">
             <input type="hidden" name="usuario" value="${Usuarios.id}">
-            <button class="btn" type="submit" name="btn" value="Guardar">Candidatura</button>
+            <center>
+                <button class="btn" type="submit" name="btn" value="Guardar" style="position: relative; align-content: center; align-self: center; ">Crear Candidatura</button>
+            </center>
         </form>
 
         <%            }

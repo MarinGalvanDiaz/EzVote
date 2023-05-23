@@ -1,0 +1,50 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 22 may 2023, 12:24:18
+    Author     : chang
+*/
+body{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 500px 600px 100px;
+  row-gap: 20px;
+  column-gap: 20px;
+  padding: 30px;
+}
+
+.grid-item-1{
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+}
+.grid-item-2{
+    grid-column: 2/4;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    background-color: white;
+    padding: 10px;
+}
+.grid-item-3{
+    grid-column: 1/4;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+}
+.grid-item-4{
+    grid-column: 3;
+    grid-row: 3;
+    justify-self: center;
+    align-self: center;
+}

@@ -34,7 +34,7 @@
         <link rel="stylesheet" href="css/Style.css">
         
     </head>
-    <body background="Images/otrofonderrimo.gif" style="height: 100%; width: 100%; background-size: cover;">
+    <body background="Images/heated.gif" style="height: 100%; width: 100%; background-size: cover;">
         <nav class="nav">
             <div class="nav-menu flex-row">
                 <div class="nav-brand">

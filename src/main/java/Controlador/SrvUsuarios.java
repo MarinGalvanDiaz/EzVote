@@ -106,11 +106,12 @@ public class SrvUsuarios extends HttpServlet {
             System.out.println("Editor");
             this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/EditorMain2.html").forward(request, response);
         }else if (usuario != null && usuario.getCargo()==7) {
-            
+            Usuarios miObjeto = new Usuarios();
             sesion.setAttribute("Usuarios", usuario);
+            request.setAttribute("miObjeto", miObjeto);
             request.setAttribute("msje", "Bienvenido al sistema");
             System.out.println("Votante");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/EditorMain2.html").forward(request, response);
+            this.getServletConfig().getServletContext().getRequestDispatcher("/Tarjetas.jsp").forward(request, response);
         }else if (usuario != null && usuario.getCargo()==8) {
             
             sesion.setAttribute("Usuarios", usuario);

@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+.container{
+    height: 100vh;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 100px; 
+}
+
+.titulo{
+    font-size: 50px;
+    font-family: 'Ultra', serif;
+    text-align: center;
+    color: black;
+}
+
+footer.footer .container1{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+footer.footer .container1 > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 1rem;
+}
+
+footer.footer .container1 h2{
+    color: var(--white);
+}
+.card{
+    height: 350px;
+    width: 300px;
+    margin: 10px;
+    transition: 300ms;
+}
+
+.personaje, .personaje_2, .personaje_3{
+    height: 350px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    background-color: #949391;
+    transition: 300ms;
+    position: absolute;
+}
+
+.imagen_personaje{
+    height: 350px;
+    width: 200px;
+    background-image: url(img/Foto1.png);
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+    object-fit: cover;
+}
+
+.imagen_personaje_2{
+    height: 350px;
+    width: 250px;
+    
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+    object-fit: cover;
+}
+
+.imagen_personaje_3{
+    height: 350px;
+    width: 200px;
+    background-image: url(img/Face2.png);
+    background-size: cover;
+    margin-bottom: 200px;
+    transition: 300ms;
+    filter: drop-shadow(5px -4px 10px #000);
+    object-fit: cover;
+}
+
+.detalle, .detalle_2, .detalle_3{
+    height: 200px;
+    width: 300px;
+    background-color: white;
+    position: absolute;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    margin-top: 150px;
+    z-index: 2;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    transition: 300ms;
+}
+
+
+/* hover */
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card:hover .imagen_personaje{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    
+}
+
+.card:hover .imagen_personaje_2{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+  
+}
+
+.card:hover .imagen_personaje_3{
+    transform: translatey(-40px);
+    transition: 300ms;
+    filter: none;
+    
+}
+
+.card:hover .personaje{
+    background-image: radial-gradient(white,#c29e84);
+}
+
+.card:hover .personaje_2{
+    background-image: radial-gradient(white,#c29e84);
+}
+
+.card:hover .personaje_3{
+    background-image: radial-gradient(white,#c29e84);
+}
+
+/* texto y bottun */
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    margin: auto;
+    width: 90%;
+    font-size: 12px;
+}
+
+
+
+.btn1 {
+    width: 100px;
+    height: 36px;
+    margin: auto;
+    cursor: pointer;
+    background-color: #DC7633;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+  
+  .btn1:hover {
+    background-color: #F5CBA7 ;
+    color: black;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+  }

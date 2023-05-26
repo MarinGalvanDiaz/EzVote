@@ -6,7 +6,6 @@
 <%
 if(session.getAttribute("Usuarios") != null){
 
-
    session.getAttribute("Usuarios");
    
     

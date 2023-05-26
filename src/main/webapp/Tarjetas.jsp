@@ -65,7 +65,7 @@ if(session.getAttribute("Usuarios") != null){
                         <a href="#">Pages</a>
                     </li>
                     <li class="nav-link">
-                        <a href="#">Contact Us</a>
+                        <a href="SrvUsuarios?accion=cerrar">Cerrar Sesión</a>
                     </li>
                 </ul>
             </div>

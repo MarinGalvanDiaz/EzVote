@@ -123,7 +123,7 @@ public class SrvUsuarios extends HttpServlet {
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
             System.out.println("Admin");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/EditorMain2.html").forward(request, response);
+            response.sendRedirect("Admin.html");
         } else {
             request.setAttribute("msje", "Credenciales Incorrectas");
             request.getRequestDispatcher("/Login.jsp").forward(request, response);

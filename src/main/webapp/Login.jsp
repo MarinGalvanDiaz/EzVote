@@ -41,7 +41,7 @@
             <div>
                 <ul class="nav-items justify-content-end">
                     <li class="nav-link">
-                        <a href="#">Home</a>
+                        <a href="PaginaPrincipal.html">Principal</a>
                     </li>
                     <li class="nav-link">
                         <a href="#">Category</a>
@@ -71,7 +71,7 @@
               <div class="card-body p-md-5 mx-md-4">
 
                 <div class="text-center">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
+                  <img src="LogoEzVote_sinfondo.png"
                     style="width: 185px;" alt="logo">
                   <h4 class="mt-1 mb-5 pb-1">Somos EzVote</h4>
                 </div>

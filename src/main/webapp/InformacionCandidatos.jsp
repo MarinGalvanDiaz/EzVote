@@ -14,10 +14,58 @@ if(session.getAttribute("Usuarios") != null){
     <head>
         <title> EzVote </title>
         <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
+        <link rel="stylesheet" href="./css/all.css">
+    <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
         <link rel="stylesheet" type="text/css" href="InfoCandidatos.css">
         <script src="https://kit.fontawesome.com/3ef3559250.js" crossorigin="anonymous"></script>
     </head>
     <body>
+        <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a class="text-gray">EzVote</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="PaginaPrincipal.html"> Principal </a>
+                    </li>
+                   
+                    <li class="nav-link">
+                        <a href="#">Archive</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Pages</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Tarjetas.jsp">Regresar</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <a href="https://www.facebook.com/profile.php?id=100092404643792&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/ezvote09?igshid=ZGUzMzM3NWJiOQ=="><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/ExvoteC?t=QoLgEAcGn7nPKT9ZUmFqpw&s=08"><i class="fab fa-twitter"></i></a>
+               
+            </div>
+        </div>
+    </nav>
+    <br>
         <%
             Conexion con = new Conexion();
             Connection cn1 = null;

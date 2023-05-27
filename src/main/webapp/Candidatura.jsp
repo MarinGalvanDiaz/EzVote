@@ -43,30 +43,7 @@
                 <div class="nav-brand">
                     <a href="#" class="text-gray">EzVote</a>
                 </div>
-                <div class="toggle-collapse">
-                    <div class="toggle-icons">
-                        <i class="fas fa-bars"></i>
-                    </div>
-                </div>
-                <div>
-                    <ul class="nav-items">
-                        <li class="nav-link">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Category</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Archive</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Pages</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
+               
                 <div class="social text-gray">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>

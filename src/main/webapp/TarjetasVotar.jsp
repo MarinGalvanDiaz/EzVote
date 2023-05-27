@@ -49,20 +49,12 @@ if(session.getAttribute("Usuarios") != null){
             <div>
                 <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="Login.jsp">Log in</a>
+                        <a href="Tarjetas.jsp">Regresar</a>
                     </li>
                     <li class="nav-link">
-                        <a href="Tarjetas.jsp"> Candidatos </a>
+                        <a href="SrvUsuarios?accion=cerrar"> Cerrar Sesion </a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">Archive</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Pages</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Contact Us</a>
-                    </li>
+                    
                 </ul>
             </div>
             <div class="social text-gray">

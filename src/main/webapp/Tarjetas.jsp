@@ -58,12 +58,7 @@ if(session.getAttribute("Usuarios") != null){
                         <a href="PaginaPrincipal.html"> Principal </a>
                     </li>
                    
-                    <li class="nav-link">
-                        <a href="#">Archive</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Pages</a>
-                    </li>
+
                     <li class="nav-link">
                         <a href="SrvUsuarios?accion=cerrar">Cerrar Sesión</a>
                     </li>

@@ -1,7 +1,9 @@
+<%@page import="javax.xml.bind.DatatypeConverter"%>
+<%@page import="Modelo.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.io.*"%>
-<%@page import="com.mycompany.adminez.conexion"%>
+
 <%@page import="java.text.*"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <!DOCTYPE html>
@@ -111,7 +113,7 @@ table {
             <div>
                 <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="Admin.html">Regresar</a>
+                        <a href="Admin.jsp">Regresar</a>
                     </li>
                     </ul>
             </div>
@@ -127,22 +129,26 @@ table {
             <br>   
         <main>
                 <table border="1" width="1000" align="center" class="tablilla">
-                    <th colspan="5" bgcolor="#F9BD67">Candidatos</th>
+                    <th colspan="7" bgcolor="#F9BD67">Candidatos</th>
                     <tr >
                             <th bgcolor="#F8DB9C">ID</th>
                             <th bgcolor="#F8DB9C">Foto</th>
                             <th bgcolor="#F8DB9C">Descripcion</th>
-                            <th bgcolor="#F8DB9C">Objetivos</th>
+                            <th bgcolor="#F8DB9C">Objetivo 1</th>
+                            <th bgcolor="#F8DB9C">Objetivo 2</th>
+                            <th bgcolor="#F8DB9C">Objetivo 3</th>
                             <th bgcolor="#F8DB9C">Videos</th>
                             <%
-                                conexion conection = new conexion();
+                                Conexion conection = new Conexion();
                                 String usuario = request.getParameter("Usuario");
                                 Connection cn = null;
                                 Connection cn2 = null;
                                 Connection cn3 = null;
+                                Connection cn4 = null;
                                 PreparedStatement ps = null;
                                 PreparedStatement ps2 = null;
                                 PreparedStatement ps3 = null;
+                                PreparedStatement ps4 = null;
                                 ResultSet rs = null;
                                 ResultSet rs2 = null;
                                 try {
@@ -151,24 +157,41 @@ table {
                                     ps = cn.prepareStatement(sql);
 
                                     rs = ps.executeQuery();
-
+                                    
                                     while (rs.next()) {
+                                    int idCandidatura = rs.getInt(1);
+                                    cn2 = conection.conectar();
+                                    ps2 = cn2.prepareStatement("Select * from objetivos where idUsuario = (?);");
+                                    ps2.setInt(1, idCandidatura);
+                                    rs2 = ps2.executeQuery();
+                                    
+                                    byte[] imagenBytes = rs.getBytes(2);
+                                    String foto =  "src=\"data:image/jpeg;base64," + DatatypeConverter.printBase64Binary(imagenBytes) + "\"";   
+                                    
+                                    byte[] videoBytes = rs.getBytes(5);
+                                    String video = "src=\"data:video/mp4;base64," + javax.xml.bind.DatatypeConverter.printBase64Binary(videoBytes) + "\"";
+                                    if(rs2.next()){
+                                    
                             %>
                     </tr>
                     <tr>
 
                             <td align="center"><%=rs.getString(1)%></td>
-                            <td align="center"><%=rs.getString(2)%></td>
+                            <td align="center"><img <%=foto%> style="height: 100px;width: 100px;"></td>
                             <td align="center"><%=rs.getString(3)%></td>
-                            <td align="center"><%=rs.getString(4)%></td>
-                            <td align="center"><%=rs.getString(5)%></td>
+                            <td align="center"><%=rs2.getString(2)%></td>
+                            <td align="center"><%=rs2.getString(3)%></td>
+                            <td align="center"><%=rs2.getString(4)%></td>
+                            <td align="center"><video width="100" height="100" controls>
+                            <source <%=video%> type="video/mp4">
+                        </video></td>
 
 
                     </tr>
 
 
                     <%
-                            }
+                        }}
                             ps.close();
                             cn.close();
                         } catch (SQLException error) {
@@ -220,6 +243,9 @@ table {
 
                     <br><br><br>
                 </form>
+                    <form action="eliminar.jsp" method="post">
+                        <button type="submit" value="recargar" id="jaqui" style="display: none;"></button>
+                    </form>
                
                 <%
                     if (request.getParameter("modificar") != null) {

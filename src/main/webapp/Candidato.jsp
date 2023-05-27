@@ -47,18 +47,7 @@
                 </div>
                 <div>
                     <ul class="nav-items">
-                        <li class="nav-link">
-                            <a href="#">Home</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Category</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Archive</a>
-                        </li>
-                        <li class="nav-link">
-                            <a href="#">Pages</a>
-                        </li>
+                       
                         <li class="nav-link">
                             <a href="SrvUsuarios?accion=cerrar">Cerrar Sesión</a>
                         </li>

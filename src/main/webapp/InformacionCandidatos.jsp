@@ -26,6 +26,7 @@ if(session.getAttribute("Usuarios") != null){
 
     <!-- Custom Style   -->
     <link rel="stylesheet" href="./css/Style.css">
+    <link rel="stylesheet" href="css/Boton.css">
         <link rel="stylesheet" type="text/css" href="InfoCandidatos.css">
         <script src="https://kit.fontawesome.com/3ef3559250.js" crossorigin="anonymous"></script>
     </head>
@@ -46,20 +47,17 @@ if(session.getAttribute("Usuarios") != null){
                         <a href="PaginaPrincipal.html"> Principal </a>
                     </li>
                    
-                    <li class="nav-link">
-                        <a href="#">Archive</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Pages</a>
-                    </li>
+                    
                     <li class="nav-link">
                         <a href="Tarjetas.jsp">Regresar</a>
                     </li>
+                    
+                    
                 </ul>
             </div>
             <div class="social text-gray">
                 
-                <a href="TarjetasVotar.jsp">Votar</a>
+                 <a href="TarjetasVotar.jsp"><button class="btn" type="button">Votar</button> </a>
                 <a href="https://www.facebook.com/profile.php?id=100092404643792&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://instagram.com/ezvote09?igshid=ZGUzMzM3NWJiOQ=="><i class="fab fa-instagram"></i></a>
                 <a href="https://twitter.com/ExvoteC?t=QoLgEAcGn7nPKT9ZUmFqpw&s=08"><i class="fab fa-twitter"></i></a>

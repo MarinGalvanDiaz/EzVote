@@ -56,12 +56,7 @@ if(session.getAttribute("Usuarios") != null){
                 <ul class="nav-items">
                     
                    
-                    <li class="nav-link">
-                        <a href="#">Archive</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Pages</a>
-                    </li>
+                   
                     <li class="nav-link">
                         <a href="Admin.jsp">Regresar</a>
                     </li>

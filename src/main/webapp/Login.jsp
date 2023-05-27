@@ -33,30 +33,17 @@
             <div class="nav-brand">
                 <a href="#" class="text-gray">EzVote</a>
             </div>
-            <div class="toggle-collapse">
-                <div class="toggle-icons">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </div>
-            <div>
-                <ul class="nav-items justify-content-end">
+           <div>
+                <ul class="nav-items">
                     <li class="nav-link">
-                        <a href="PaginaPrincipal.html">Principal</a>
+                        <a href="PaginaPrincipal.html"> Principal </a>
                     </li>
-                    <li class="nav-link">
-                        <a href="#">Category</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Archive</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Pages</a>
-                    </li>
-                    <li class="nav-link">
-                        <a href="#">Contact Us</a>
-                    </li>
+                   
+
+                    
                 </ul>
             </div>
+            
             
         </div>
     </nav>

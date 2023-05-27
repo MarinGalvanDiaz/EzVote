@@ -59,7 +59,7 @@ if(session.getAttribute("Usuarios") != null){
             </div>
             <div class="social text-gray">
                 
-                <a href="RegistrarVoto.jsp">Votar</a>
+                <a href="TarjetasVotar.jsp">Votar</a>
                 <a href="https://www.facebook.com/profile.php?id=100092404643792&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
                 <a href="https://instagram.com/ezvote09?igshid=ZGUzMzM3NWJiOQ=="><i class="fab fa-instagram"></i></a>
                 <a href="https://twitter.com/ExvoteC?t=QoLgEAcGn7nPKT9ZUmFqpw&s=08"><i class="fab fa-twitter"></i></a>

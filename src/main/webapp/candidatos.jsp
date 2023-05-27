@@ -1,7 +1,7 @@
+<%@page import="Modelo.Conexion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.sql.*"%>
 <%@page import="java.io.*"%>
-<%@page import="com.mycompany.adminez.conexion"%>
 <%@page import="java.text.*"%>
 <%@page import="java.text.SimpleDateFormat"%>
 
@@ -89,7 +89,7 @@
                             <th bgcolor="#F8DB9C">Videos</th>
 
                                 <%
-                                    conexion conection = new conexion();
+                                    Conexion conection = new Conexion();
                                     String usuario = request.getParameter("Usuario");
                                     Connection cn = null;
                                     Connection cn2 = null;

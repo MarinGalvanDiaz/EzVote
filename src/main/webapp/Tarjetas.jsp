@@ -10,6 +10,7 @@
 
 <%@page import="java.sql.*"%>
 <%@page import="Modelo.Conexion"%>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <%
 if(session.getAttribute("Usuarios") != null){
 
@@ -54,9 +55,7 @@ if(session.getAttribute("Usuarios") != null){
             </div>
             <div>
                 <ul class="nav-items">
-                    <li class="nav-link">
-                        <a href="PaginaPrincipal.html"> Principal </a>
-                    </li>
+                   
                    
 
                     <li class="nav-link">
@@ -78,6 +77,7 @@ if(session.getAttribute("Usuarios") != null){
 <center>
     <div class="container">
         <%
+            
         Conexion con = new Conexion();
         Connection cn1 = null;
         PreparedStatement ps = null;

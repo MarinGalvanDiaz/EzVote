@@ -16,6 +16,7 @@
 
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="./css/all.css">
+        <link rel="stylesheet" href="./css/Boton.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
@@ -30,6 +31,7 @@
 
         <!-- Custom Style   -->
         <link rel="stylesheet" href="./css/Style2.css">
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <style>
             table {
                 width: 90%;
@@ -140,7 +142,29 @@
                         }
                     %>
                 </table>
-
+                <br>
+                <br>
+                <br>
+                <form action="" method="post">
+                    <button type="submit" name="botoncin" class="btn">Cerrar votaciones</button>
+                    
+                </form>
+                <%
+                if(request.getParameter("botoncin")!=null){
+                Connection cn3 = null;
+                PreparedStatement ps3 = null;
+                String sql3 = "Update Usuarios set estado = 0 where cargo = 7 or cargo =8;";
+                out.print("<script>");
+                out.print("swal('Realizado!','Votaciones cerradas','success')");
+                
+                out.print("</script>");
+                cn3 = conection.conectar();
+                ps3 = cn3.prepareStatement(sql3);
+                ps3.executeUpdate();
+               
+                    }
+                
+                %>
                 </CENTER>
             </main>
 
@@ -155,5 +179,6 @@
 
             <!-- Custom Javascript file -->
             <script src="./js/main.js"></script>
+            
             </body>
             </html>

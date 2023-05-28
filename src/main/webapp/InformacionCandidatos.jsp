@@ -43,9 +43,7 @@ if(session.getAttribute("Usuarios") != null){
             </div>
             <div>
                 <ul class="nav-items">
-                    <li class="nav-link">
-                        <a href="PaginaPrincipal.html"> Principal </a>
-                    </li>
+                    
                    
                     
                     <li class="nav-link">

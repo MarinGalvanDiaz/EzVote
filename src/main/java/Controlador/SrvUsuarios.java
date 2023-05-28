@@ -34,7 +34,7 @@ public class SrvUsuarios extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-         String accion = request.getParameter("accion");
+        String accion = request.getParameter("accion");
         try {
             if (accion != null) {
                 switch (accion) {
@@ -58,7 +58,8 @@ public class SrvUsuarios extends HttpServlet {
             }
         }
     }
- private void verificar(HttpServletRequest request, HttpServletResponse response) throws Exception {
+
+    private void verificar(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HttpSession sesion;
         VerifUsuarios dao;
         Usuarios usuario;
@@ -66,79 +67,89 @@ public class SrvUsuarios extends HttpServlet {
         sesion = request.getSession();
         dao = new VerifUsuarios();
         usuario = dao.identificar(usuario);
-        if (usuario != null && usuario.getCargo()==1 && usuario.getEstado()==1) {
-            
+        if (usuario != null && usuario.getCargo() == 1 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println(usuario.getId());
             System.out.println("GerentinS");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/GerenteSMain.html").forward(request, response);
+            
+            request.getSession().setAttribute("liga", "Soporte/GerenteSMain.html");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 3 && usuario.getEstado() == 1) {
 
-        } else if (usuario != null && usuario.getCargo()==3 && usuario.getEstado()==1) {
-           
             sesion.setAttribute("Usuarios", usuario);
             System.out.println(usuario.getId());
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println("Asistente");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/AsistenteMain.html").forward(request, response);
-        } else if (usuario != null && usuario.getCargo()==2 && usuario.getEstado()==1) {
             
+            request.getSession().setAttribute("liga", "Soporte/AsistenteMain.html");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 2 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println("GerentinM");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/GerenteMMain.htmlp").forward(request, response);
-        } else if (usuario != null && usuario.getCargo()==5 && usuario.getEstado()==1) {
-            
+             request.getSession().setAttribute("liga", "Soporte/GerenteMMain.html");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 5 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println("IngeSoporte");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/IngenieroSMain.html").forward(request, response);
-        } else if (usuario != null && usuario.getCargo()==4 && usuario.getEstado()==1) {
-           
+             request.getSession().setAttribute("liga", "Soporte/IngenieroSMain.html");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 4 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println("IngeMante");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/IngenieroMMain.html").forward(request, response);
-        } else if (usuario != null && usuario.getCargo()==6 && usuario.getEstado()==1) {
-            
+             request.getSession().setAttribute("liga", "Soporte/IngenieroMMain.html");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 6 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println("Editor");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Soporte/EditorMain2.html").forward(request, response);
-        }else if (usuario != null && usuario.getCargo()==7 && usuario.getEstado()==1) {
-            
+             request.getSession().setAttribute("liga", "Soporte/EditorMain2.html");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 7 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             request.setAttribute("msje", "Bienvenido al sistema");
             System.out.println("Votante");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/Tarjetas.jsp").forward(request, response);
-        }else if (usuario != null && usuario.getCargo()==8 && usuario.getEstado()==1) {
-            
+            request.getSession().setAttribute("liga", "Tarjetas.jsp");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 8 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println("Candidato");
-            this.getServletConfig().getServletContext().getRequestDispatcher("/VerificarCandidato.jsp").forward(request, response);
-        }else if (usuario != null && usuario.getCargo()==9 && usuario.getEstado()==1) {
-            
+            request.getSession().setAttribute("liga", "VerificarCandidato.jsp");
+            response.sendRedirect("Bienvenida.jsp");
+        } else if (usuario != null && usuario.getCargo() == 9 && usuario.getEstado() == 1) {
+
             sesion.setAttribute("Usuarios", usuario);
             request.setAttribute("msje", "Bienvenido al sistema");
-            request.getSession().setAttribute("IdUsuario",usuario.getId());
+            request.getSession().setAttribute("IdUsuario", usuario.getId());
             System.out.println("Admin");
-            response.sendRedirect("Admin.jsp");
+            request.getSession().setAttribute("liga", "Admin.jsp");
+            response.sendRedirect("Bienvenida.jsp");
         } else {
             request.setAttribute("msje", "Credenciales Incorrectas");
-            request.getRequestDispatcher("/Login.jsp").forward(request, response);
+            response.sendRedirect("Mensaje.jsp");
         }
     }
 
-    private void cerrarsession(HttpServletRequest request, HttpServletResponse response) throws Exception{
+    private void cerrarsession(HttpServletRequest request, HttpServletResponse response) throws Exception {
         HttpSession sesion = request.getSession();
         sesion.setAttribute("Usuarios", null);
         sesion.invalidate();

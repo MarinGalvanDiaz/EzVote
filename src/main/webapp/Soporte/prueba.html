@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ejemplo de ejecución única de script</title>
+    </head>
+    <body>
+        <h1>Página de ejemplo</h1>
+        <!-- Contenido de la página -->
+
+        <button id="ejemplo">Botón de prueba</button>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script>
+            function ejecutar() {
+                location.reload();
+            }
+        </script>
+        <button type='button' id='miBoton'></button>
+        <script>
+            (function () {
+                var boton = document.getElementById("miBoton");
+
+                // Simular el clic en el botón
+                boton.click();
+            }
+
+
+            );
+
+        </script>
+        <script>
+            $("#miboton").one("click", function () {
+                window.stop();
+                location.reload();
+            });
+        </script>
+    </body>
+</html>

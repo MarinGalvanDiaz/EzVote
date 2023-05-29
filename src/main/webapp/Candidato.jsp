@@ -131,14 +131,16 @@
         } else {
 
         %>
-
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div style="display: flex; justify-content: center; align-items: center;">
         <form method="post" action="Candidatura.jsp">
             <input type="hidden" name="usuario" value="${Usuarios.id}">
             <center>
                 <button class="btn" type="submit" name="btn" value="Guardar" style="position: relative; align-content: center; align-self: center; ">Crear Candidatura</button>
             </center>
         </form>
-
+        </div>
+        </div>
         <%            }
 
         %>

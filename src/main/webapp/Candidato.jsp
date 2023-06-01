@@ -16,7 +16,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
          
-        <title>JSP Page</title>
+        <title>Candidato</title>
         <link rel="stylesheet" href="css/Estilo.css">
         <link rel="stylesheet" href="css/Boton.css">
         <!-- Font Awesome Icons -->
@@ -32,7 +32,7 @@
 
         <!-- Custom Style   -->
         <link rel="stylesheet" href="css/Style.css">
-        
+        <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
     </head>
     <body background="Images/heated.gif" style="height: 100%; width: 100%; background-size: cover;">
         <nav class="nav">

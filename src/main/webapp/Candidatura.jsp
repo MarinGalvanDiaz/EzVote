@@ -20,7 +20,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <title>JSP Page</title>
+        <title>Candidatura</title>
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="css/Boton.css">
         <link rel="stylesheet" href="css/Inputs.css">
@@ -36,6 +36,7 @@
 
         <!-- Custom Style   -->
         <link rel="stylesheet" href="css/Style.css">
+        <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
     </head>
     <body background="Images/otrofonderrimo.gif" style="height: 100%; width: 100%; background-size: cover; background-repeat:   no-repeat; background-attachment: fixed;">
         <nav class="nav">

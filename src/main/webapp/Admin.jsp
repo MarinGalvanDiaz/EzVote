@@ -17,7 +17,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Administrador</title>
-
+        <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
         <!-- Font Awesome Icons -->
         <link rel="stylesheet" href="./css/all.css">
 

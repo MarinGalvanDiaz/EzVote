@@ -22,7 +22,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <title>JSP Page</title>
+        <title>Candidatura</title>
+        <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
     </head>
     <body>
         <%

@@ -26,6 +26,7 @@
 
         <!-- Custom Style   -->
         <link rel="stylesheet" href="./css/Style2.css">
+        <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
         <!DOCTYPE html>
     <html>

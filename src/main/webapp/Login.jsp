@@ -26,6 +26,7 @@
 
     <!-- Custom Style   -->
     <link rel="stylesheet" href="css/Style.css">
+    <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
     </head>
     <body>
         <nav class="nav">

@@ -28,8 +28,9 @@
         <!-- Custom Style   -->
         <link rel="stylesheet" href="./css/Style2.css">
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <!DOCTYPE html>
-    <html>
+        <link rel="shortcut icon" href="LogoEzVote_sinfondo.png" type="image/x-icon">
+       
+    
         <head>
             <style>
                 /* Estilos para personalizar el select */

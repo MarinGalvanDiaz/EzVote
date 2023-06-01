@@ -125,19 +125,19 @@
                 <CENTER>
                     <section class="site-title">
                         <div class="site-background" data-aos="fade-up" data-aos-delay="100">
-                            <h2 style="color: #eb7d46">Validar Candidatos</h2>
+                            <h2 style="color: #eb7d46">Votantes</h2>
                         </div>
                         <br>   
                         <main>
                             <table border="1" width="1000" align="center" class="tablilla">
-                                <th colspan="5" bgcolor="#F9BD67">Candidatos</th>
+                                <th colspan="4" bgcolor="#F9BD67">Votantes</th>
                                 <tr >
                                     <th bgcolor="#F8DB9C">ID</th>
-                                    <th bgcolor="#F8DB9C">Nombre</th>
+                                    <th bgcolor="#F8DB9C">Identificador</th>
                                     <th bgcolor="#F8DB9C">Correo</th>
 
-                                    <th bgcolor="#F8DB9C">Validar</th>
-                                    <th bgcolor="#F8DB9C">Eliminar</th>
+                                    <th bgcolor="#F8DB9C">¿Ya ha votado?</th>
+                                   
 
                                     <%
                                         Conexion conection = new Conexion();
@@ -149,14 +149,19 @@
                                         ResultSet rs = null;
 
                                         try {
-                                            String sql = "select * from Usuarios where cargo = 8 and estado = 0;";
+                                            String sql = "select * from Usuarios where cargo = 7;";
                                             cn = conection.conectar();
                                             ps = cn.prepareStatement(sql);
 
                                             rs = ps.executeQuery();
 
                                             while (rs.next()) {
-
+                                            String haVotado = "";
+                                            if(rs.getInt(6)==0){
+                                            haVotado="SI";
+                                        }else{
+                                        haVotado="NO";
+                                        }
 
                                     %>
                                 </tr>
@@ -165,8 +170,8 @@
                                     <td align="center"><%=rs.getString(1)%></td>
                                     <td align="center"><%=rs.getString(2)%></td>
                                     <td align="center"><%=rs.getString(4)%></td>
-                                    <td align="center"><form action="Validar.jsp" method="post"><input type="hidden" value="<%=rs.getInt(1)%>" name="usuario"><button type="submit" name="Simon" class="btn-custom">Validar</button></form></td>
-                                    <td align="center"><form action="Eliminar2.jsp" method="post"><input type="hidden" value="<%=rs.getInt(1)%>" name="usuario"><button type="submit" name="Nelson" class="btn-custom">Rechazar</button></form></td>
+                                    <td align="center"><%=haVotado%></td>
+                                    
 
 
                                 </tr>

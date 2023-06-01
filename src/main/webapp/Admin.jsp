@@ -52,6 +52,9 @@
                 <div>
                     <ul class="nav-items">
                         <li class="nav-link">
+                            <a href="Votantes.jsp">Ver votantes</a>
+                        </li>
+                        <li class="nav-link">
                             <a href="RegistroVotantes.jsp">Registrar votantes</a>
                         </li>
                         <li class="nav-link">

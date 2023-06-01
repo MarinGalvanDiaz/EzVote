@@ -1,0 +1,32 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 1 jun 2023, 01:34:01
+    Author     : chang
+*/
+#spinner   {  
+           
+            animation: spin 1s linear infinite;
+            color: red;
+        }
+          
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+          
+.inline{
+    display: flex;
+}
+.center{
+    width: 100%;
+}
+.spinner i{
+    margin-top: 10px;
+    margin-left: 50px;
+
+    
+}
